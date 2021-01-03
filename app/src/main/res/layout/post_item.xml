@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    android:background="@color/purple_500"
+    app:cardCornerRadius="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_500"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:background="@color/teal_200"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="6dp"
+            android:weightSum="3">
+
+            <TextView
+                android:id="@+id/userDnameTv_pL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:paddingStart="3dp"
+                android:paddingLeft="3dp"
+                android:paddingTop="3dp"
+                android:paddingRight="6dp"
+                android:text="A User"
+                android:textColor="#272727"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/userNameTv_pL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:padding="4dp"
+                android:text="\@auser"
+                android:textColor="@color/dGray" />
+
+            <TextView
+                android:id="@+id/postAddDate_pL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:padding="2dp"
+                android:text="2 Oct"
+                android:textColor="@color/dGray"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/postTextView_pL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="6dp"
+            android:text="TextView"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

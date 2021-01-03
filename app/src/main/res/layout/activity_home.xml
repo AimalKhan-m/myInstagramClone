@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.HomeActivity">
+
+    <LinearLayout
+        android:id="@+id/homeTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        app:layout_constraintBottom_toTopOf="@id/mainFragContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="46dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_weight="0"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="6dp"
+                android:visibility="gone"
+                app:cardBackgroundColor="#FA4848"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0dp">
+
+                <ImageView
+                    android:id="@+id/profileAvatar_addPostA"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#26CF13"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/sample_img" />
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/userName_HA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="9"
+            android:gravity="start|center_vertical"
+            android:paddingStart="6dp"
+            android:text="A"
+            android:textColor="#0B0B0B"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/logOutBtn_HA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|end"
+            android:gravity="center_vertical|end"
+            android:onClick="onClick"
+            android:text="LOGOUT" />
+
+    </LinearLayout>
+
+     <FrameLayout
+        android:id="@+id/mainFragContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+         android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/homeTitleBar"
+        app:layout_constraintBottom_toTopOf="@id/main_BNV"
+         >
+
+     </FrameLayout>
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mainFragContainer" />
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/main_BNV"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        app:itemTextColor="#FFFFFF"
+        app:labelVisibilityMode="unlabeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:menu="@menu/main_bottom_nav" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addPostFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="26dp"
+        android:clickable="true"
+        android:foregroundTint="#FFFFFF"
+        android:src="@drawable/ic_add"
+        app:backgroundTint="#FFC107"
+        app:elevation="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/mainFragContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:maxImageSize="36dp"
+        app:tint="#FFFBFB"
+        android:contentDescription="TODO" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
